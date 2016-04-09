@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!-- Template by Quackit.com -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title ng-title></title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="css/custom.css" rel="stylesheet">
+    
+    <link href="http://db.onlinewebfonts.com/c/d3e5565884b751094df6825c37eeac5e?family=Gisha" rel="stylesheet" type="text/css"/>
+    
+    <!-- Metro UI CSS -->
+    <link href="css/MetroUI/metro.css" rel="stylesheet">
+    <link href="css/MetroUI/metro-responsive.css" rel="stylesheet">
+    
+        <!-- jQuery -->
+    <script src="/js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+    
+    <!-- Angular JS -->
+    <script src="https://code.angularjs.org/1.5.0/angular.js"></script>
+    <script src="https://code.angularjs.org/1.5.0/angular-route.js"></script>
+	
+	<!-- IE10 viewport bug workaround -->
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+    
+    <!-- custom js -->
+    <script src="/js/script.js"></script>
+    <script src="/js/servicesApp.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-app="sampleApp">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button> 
+                <a class="navbar-brand" href="#/">
+                	<span class="glyphicon glyphicon-fire"></span> 
+                	Sample
+                </a>
+            </div>
+                        <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#/"><span class="glyphicon glyphicon-home"></span> Home</a>
+                    </li>
+                    <li>
+                        <a href="#/about"><span class="glyphicon glyphicon-info-sign"></span> About</a>
+                    </li>
+					<li class="dropdown">
+                        <!--class="dropdown-toggle"-->
+						<a href="#/services"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-briefcase"></span> Services <span class="caret"></span></a>
+						<ul class="dropdown-menu" aria-labelledby="about-us">
+							<li><a href="#/Services/it-consulting"><span class="glyphicon glyphicon-cog"></span> IT Consulting</a></li>
+							<li><a href="#/Services/development"><span class="glyphicon glyphicon-play"></span> Development</a></li>
+							<li><a href="#/Services/web-services"><span class="glyphicon glyphicon-globe"></span> Web Services</a></li>
+						</ul>
+					</li>
+                    <li>
+                        <a href="#/contact"><span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a>
+                    </li>
+                </ul>
+
+				<!-- Search
+				<form class="navbar-form navbar-right" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control">
+					</div>
+					<button type="submit" class="btn btn-default">Search</button>
+				</form>  -->
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <hr>
+
+    <div class="page-header">
+		<div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-8">
+                <img src="images/logo/logo.png" height="100" width="100">
+                    <i style="font-size:35px;">SAMPLE FIRM</i>
+		      </div>
+                
+                <div class="col-xs-6 col-md-4" >
+                    <br>
+                    <h5>Need Support? </h5>
+                    <h5>Call US +1 925-218-4560 </h5>
+                    
+                </div>
+            </div>
+        </div>
+	</div>
+    
+	<div class="jumbotron feature">
+		<div class="container">
+			<h1><span class="glyphicon glyphicon-equalizer"></span> One stop solution for all your needs</h1>
+			<p>We value your investment</p>
+			<p><a class="btn btn-default" href="#/contact"><span class="glyphicon glyphicon-phone"> Contact Us Today</a></p>
+		</div>
+	</div>
+
+    <!-- Content -->
+    <div class="container">
+
+
+            <div id="main">
+                   <!-- angular templating -->
+		           <!-- this is where content will be injected -->
+                    <div ng-view></div>
+            </div>
+                
+    </div>
+    <!-- /.container -->
+
+   
+<hr>
+<footer>
+<div class="footer-blurb">
+<div class="container">
+<div class="row">
+  <div class="col-md-4">
+  <h4 class=page-header>Navigate Here</h4>
+                        <ul>
+							<li><a href="#/">Home</a></li>
+							<li><a href="#/about">About</a></li>
+                            <li><a href="#/services">Services</a></li>
+                            <li><a href="#/contact">Contact</a></li>
+						</ul>
+      
+  </div>
+  <div class="col-md-4">
+  
+      <h4 class=page-header>Services</h4>
+                        <ul>
+							<li><a href="#/Services/it-consulting">IT Consulting</a></li>
+							<li><a href="#/Services/development">Development</a></li>
+							<li><a href="#/Services/web-services">Web Services</a></li>
+						</ul>
+      
+  </div>
+      
+  <div class="col-md-4">
+  
+      <h4 class="page-header">Sample Consulting</h4>
+
+      1948 S Foresthill Pl, Danville, CA 94526 <br>                                     
+      <span class="glyphicon glyphicon-earphone"></span> +1 123-456-789 <br>
+      <span class="glyphicon glyphicon-envelope"></span>  <br>
+      <span class="glyphicon glyphicon-envelope"></span> 
+
+      
+  </div>
+</div>
+       
+<div class="row">
+    <div class="col-md-4">
+        <div class="small-print">
+        	<div class="container">
+                <small><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a> | Copyright &copy; Sample Consulting 2016
+                </small>
+        	</div>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</footer>
+
+	
+</body>
+
+</html>
